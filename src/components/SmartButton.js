@@ -4,8 +4,8 @@ const delayInterval = 100
 let timer
 let timerAllow = true      // Таймер разрешен 
 let timerOff = true          // Таймер запущен           
-let changeCount = 0         // Текущее число повторений
-let changeMaxCount = 100    // Максимальное число повторений
+//let changeCount = 0         // Текущее число повторений
+//let changeMaxCount = 100    // Максимальное число повторений
 
 
 let SmartButton = ({ clickHandler, label }) => {
@@ -30,13 +30,13 @@ let SmartButton = ({ clickHandler, label }) => {
             //console.log(`timerAllow: ${timerAllow}, timerOff: ${timerOff}.`)
 
             if (timerAllow && timerOff) {
-                changeCount = 0
+                //changeCount = 0
                 timerOff = false
                 timer = setInterval(() => {
-                    if (changeCount < changeMaxCount - 1) {
-                        clickHandler(e)
-                        changeCount++
-                    }
+                    //if (changeCount < changeMaxCount - 1) {
+                    clickHandler(e)
+                    //    changeCount++
+                    //}
                 }, delayInterval, e)
             }
         }, delayInterval * 4)
