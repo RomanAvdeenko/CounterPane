@@ -5,7 +5,6 @@ import CounterPane from './components/CounterPane'
 ReactDOM.render(
   <React.StrictMode>
     <CounterPane />
-    <CounterPane />
-  </React.StrictMode>,
+    </React.StrictMode>,
   document.querySelector('#root')
 );
